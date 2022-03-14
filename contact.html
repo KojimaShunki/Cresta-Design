@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cresta Design</title>
+  <!-- CSS -->
+  <link rel="stylesheet" href="css/styles.css">
+
+  <!-- reset CSS -->
+  <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css">
+
+  <!-- favicon -->
+  <!-- <link rel="icon" href="img/favicon.ico"> -->
+
+  <!-- Google Font -->
+  <link href=“https://fonts.googleapis.com/css?family=Noto+Serif|Noto+Serif+JP&display=swap” rel=“stylesheet”>
+
+  <!-- jQuery -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+  <!-- slick -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"></script>
+</head>
+<body  class="page">
+  <header class="header">
+    <div class="wrapper">
+      <div class="header__logo"><a class="header__logo--italic" href="#">Cresta Design</a></div>
+      
+      <nav class="header__navi">
+        <ul>
+          <li><a class="header__navi--italic" href="index.html#concept">Concept</a></li>
+          <li><a class="header__navi--italic" href="index.html#works">Works</a></li>
+          <li><a class="header__navi--italic" href="index.html#service">Service</a></li>
+          <li><a class="header__navi--italic" href="index.html#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+
+    <div class="humberger-menu">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+  
+    <nav id="humberger-navigation">
+      <ul class="sections">
+        <li><a class="humberger-menu-section" href="index.html#concept">Concept</a></li>
+          <li><a class="humberger-menu-section" href="index.html#works">Works</a></li>
+          <li><a class="humberger-menu-section" href="index.html#service">Service</a></li>
+          <li><a class="humberger-menu-section" href="index.html#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <div class="mainvisual">
+      <img src="img/contact-page-bgi@2x.jpg" alt="">
+      <h1>Contact</h1>
+      <div>Contact us</div>
+    </div>
+
+
+    <div class="wrapper">
+      <form>
+        <div>
+            <legend>お問い合わせ内容</legend>
+            <div class="checkbox">
+              <label><input type="checkbox">資料請求</label>
+              <label><input type="checkbox">お電話でのご相談を希望</label>
+              <label><input type="checkbox">申し込み</label>
+            </div>
+        </div>
+      
+        <div>
+            <label for="name">担当者名</label>
+            <input class="name" id="name" type="text" name="name">
+        </div>
+        
+        <div>
+            <label for="phone">電話番号</label>
+            <input class="phone" id="phone" type="text" name="phone">
+        </div>
+        <div>
+            <label for="mail">メールアドレス</label>
+            <input class="mail" id="mail" type="email" name="email">
+        </div>
+      
+        <div>
+            <label for="comment">その他</label>
+            <textarea class="comment" id="comment" rows="10" cols="30"></textarea>
+        </div>
+      
+        <div class="btn">
+            <input type="submit" value="Submit">
+        </div>
+      </form>
+    </div>
+  </main>
+
+  <footer>
+    <p>©︎cresta.design all rights reserved</p>
+  </footer>
+  <script src="js/main.js"></script>
+</body>

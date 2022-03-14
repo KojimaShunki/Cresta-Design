@@ -1,0 +1,146 @@
+@import 'function';
+
+.header {
+  width: 100%;
+  height: 72px;
+  line-height: 72px;
+  position: fixed;
+  color: #fff;
+  z-index: 30;
+  background-color: rgba($color: $main-color, $alpha: 0);
+  padding: 0 15px;
+  transition: all 0.5s ease 0s;
+
+  &.show {
+  background-color: rgba($color: $main-color, $alpha: 1.0);
+  }
+
+  .wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  &__logo {
+    font-size: 1.625rem;
+    font-weight: bold;
+    letter-spacing: 0.05em;
+
+    &--italic {
+      font-style: italic;
+    }
+  }
+
+  &__navi {
+    font-weight: bold;
+
+    @include mq('sp') {
+      display: none;
+    }
+    
+    &--italic {
+      font-style: italic;
+    }
+
+    ul {
+      display: flex;
+
+      li {
+        margin-left: 30px;
+      }
+    }
+  }
+}
+
+.humberger-menu {
+  display: block;
+  width: 72px;
+  height: 72px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 30;
+  cursor: pointer;
+  display: none;
+  
+  @include mq('sp') {
+    display: block;
+  }
+}
+
+.humberger-menu span {
+  width: 30px;
+  height: 3px;
+  background-color: #fff;
+  position: absolute;
+  left: 21px;
+  transition: 0.4s ease-in-out;
+}
+
+.humberger-menu span:nth-child(1) {
+  top: 23px;
+}
+
+.humberger-menu span:nth-child(2) {
+  top: 34px;
+}
+
+.humberger-menu span:nth-child(3) {
+  top: 45px;
+}
+
+.humberger-menu.active span:nth-child(1) {
+  top: 34px;
+  left: 21px;
+  background: #fff;
+  transform: rotate(-45deg);
+}
+
+.humberger-menu.active span:nth-child(2),
+.humberger-menu.active span:nth-child(3) {
+  top: 34px;
+  left: 21px;
+  background: #fff;
+  transform: rotate(45deg);
+}
+
+#humberger-navigation {
+  width: 100%;
+  height: 100vh;
+  background-color: $main-color;
+  color: #fff;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 20;
+  opacity: 0;
+  text-align: center;
+  transition: opacity 0.8s;
+  visibility: hidden;
+}
+
+#humberger-navigation .sections {
+  margin-top: 320px;
+}
+
+#humberger-navigation .sections li {
+  margin-bottom: 30px;
+  line-height: 16px;
+}
+
+#humberger-navigation .sections a {
+  color: #fff;
+  font-weight: bold;
+  font-style: italic;
+}
+
+#humberger-navigation .sections a:hover {
+  opacity: 0.7;
+}
+
+#humberger-navigation.active {
+  opacity: 1;
+  visibility: visible;
+}

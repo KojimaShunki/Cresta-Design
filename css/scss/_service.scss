@@ -1,0 +1,128 @@
+@import 'function';
+
+#service {
+  padding: 100px 0 70px;
+
+  .wrapper {
+    padding: 0 15px;
+  }
+
+  @include mq('sp') {
+    padding-bottom: 40px;
+  }
+
+  .section-title {
+    font-size: 3.75rem;
+    font-weight: bold;
+    font-style: italic;
+    position: relative;
+    max-width: 1000px;
+    margin: 0 auto;
+    letter-spacing: 0.1em;
+
+    @include mq('sp') {
+      font-size: 1.875rem;
+    }
+
+    &::after {
+      content: '';
+      width: 200px;
+      height: 5px;
+      background-color: #000;
+      position: absolute;
+      top: 50%;
+      left: 285px;
+      transform: translateY(-50%);
+
+      @include mq('sp') {
+          width: 90px;
+          left: 160px;
+        }
+    }
+  }
+
+  .content {
+    padding-top: 80px;
+
+    .lists {
+      display: flex;
+      justify-content: center;
+
+      @include mq('sp') {
+        flex-direction: column;
+      }
+
+      li {
+        position: relative;
+        width: calc(100% / 3);
+
+        &:hover {
+          background-color: rgba($color: #000000, $alpha: 0.7);
+        }
+
+        @include mq('sp') {
+          width: 100%;
+
+          &:not(:last-child) {
+            margin-bottom: 30px;
+          }
+        }
+
+
+        img {
+          width: 100%;
+          vertical-align: bottom;
+          
+        }
+
+        .bg {
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          z-index: 5;
+          transition: all 0.5s;
+
+          &:hover {
+            background-color: rgba($color: $main-color, $alpha: 0.7);
+          }
+        }
+
+        p {
+          color: #fff;
+          font-size: 2.5rem;
+          font-weight: bold;
+          font-style: italic;
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          z-index: 8;
+
+          @include mq('sp') {
+            font-size: 1.25rem;
+          }
+        }
+      }
+    }
+  }
+
+  .section-subtitle {
+    max-width: 1200px;
+    margin: 0 auto;    
+
+    p {
+      font-size: 5.625rem;
+      font-weight: bold;
+      color: rgba($color: #171717, $alpha: 0.05);
+      text-align: right;
+      padding-top: 70px;
+
+      @include mq('sp') {
+        font-size: 2.5rem;
+        padding-top: 40px;
+      }
+    }
+  }
+}

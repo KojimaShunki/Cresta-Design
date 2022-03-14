@@ -1,0 +1,116 @@
+@import 'function';
+
+#works {
+  background-image: url(../../img/works-bgi@2x.jpg);
+  background-size: cover;
+  background-position: center;
+  padding: 100px 15px 70px;
+
+  @include mq('sp') {
+    padding-bottom: 40px;
+  }
+
+  .wrapper {
+    max-width: 1200px;
+    margin: 0 auto;
+    
+    .section-title {
+      font-size: 3.75rem;
+      font-weight: bold;
+      font-style: italic;
+      position: relative;
+      color: #fff;
+      text-align: right;
+      padding-right: 250px;
+      letter-spacing: 0.1em;
+
+      @include mq('sp') {
+        font-size: 1.875rem;
+        padding-right: 130px;
+      }
+
+      &::after {
+        content: '';
+        width: 200px;
+        height: 5px;
+        background-color: #fff;
+        position: absolute;
+        top: 50%;
+        // left: 345px;
+        right: 0;
+        transform: translateY(-50%);
+
+        @include mq('sp') {
+          width: 90px;
+        }
+      }
+    }
+
+    .container {
+      padding-top: 80px;
+      max-width: 1000px;
+      margin: 0 auto;
+
+      .lists {
+        display: flex;
+        justify-content: space-between;
+        padding-bottom: 80px;
+
+        @include mq('sp') {
+          flex-direction: column;
+          padding-bottom: 40px;
+        }
+
+        li {
+          width: 32%;
+          background-color: #fff;
+
+          @include mq('sp') {
+            width: 100%;
+            
+            &:not(:last-child) {
+              margin-bottom: 30px;
+            }
+          }
+
+          img {
+            width: 100%;
+          }
+          
+          p {
+            padding: 25px 20px;
+          }
+        }
+      }
+      
+      .btn {
+        text-align: center;
+        
+        a {
+          display: inline-block;
+          width: 235px;
+          padding-top: 18px;
+          padding-bottom: 18px;
+          background-color: #F7D43F;
+          box-shadow:  0 0 6px #1B1310;
+          border-radius: 30px;
+        }
+      }
+    }
+
+    .section-subtitle {
+      font-size: 5.625rem;
+      font-weight: bold;
+      color: rgba($color: #fff, $alpha: 0.1);
+      padding-top: 70px;
+      
+      max-width: 1200px;
+      margin: 0 auto;
+
+      @include mq('sp') {
+        font-size: 2.5rem;
+        padding-top: 40px;
+      }
+    }
+  }
+}

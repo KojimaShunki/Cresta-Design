@@ -1,0 +1,95 @@
+@import 'function';
+
+.page {
+  header {
+    background-color: rgba($color: $main-color, $alpha: 1.0);
+  }
+  
+  .mainvisual {
+    position: relative;
+    text-align: center;
+
+    img {
+      min-height: 360px;
+      overflow: hidden;
+      object-fit: cover;
+      
+    }
+
+    h1 {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      color: #fff;
+      font-size: 3.75rem;
+      font-style: italic;
+      letter-spacing: 0.1em;
+
+      @include mq('sp') {
+        font-size: 1.875rem;
+      }
+    }
+
+    div {
+      position: absolute;
+      bottom: 40px;
+      left: 48px;
+      color: rgba($color: #fff, $alpha: 0.05);
+      font-size: 5.625rem;
+
+      @include mq('sp') {
+        font-size: 2.5rem;
+      }
+    }
+  }
+  
+  .wrapper {
+    padding: 0 15px;
+
+    form {
+      max-width: 700px;
+      margin: 100px auto 0;
+  
+      > div:not(:last-child) {
+        margin-bottom: 22px;
+      }
+  
+      .name, .phone, .mail, .comment {
+        width: 100%;
+        border: #000 1px solid
+      }
+  
+      .name, .phone, .mail {
+        height: 30px;
+      }
+  
+      .checkbox {
+        display: flex;
+  
+        label {
+          margin-right: 20px;
+  
+          input {
+            margin-right: 10px;
+          }
+        }
+      }
+  
+      .btn {
+        text-align: center;
+        
+        input[type="submit"] {
+          display: inline-block;
+          width: 235px;
+          padding-top: 18px;
+          padding-bottom: 18px;
+          background-color: #F7D43F;
+          box-shadow:  0 0 6px #1B1310;
+          border-radius: 30px;
+          margin: 80px 0;
+        }
+      }
+    }
+  }
+}

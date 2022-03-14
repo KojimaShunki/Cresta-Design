@@ -1,0 +1,13 @@
+$main-color : #282F35;
+
+// ブレークポイント式
+$breakpoints: (
+  "sp": "screen and (max-width: 600px)",
+);
+
+// メディアクエリー式
+@mixin mq($breakpoint: sp) {
+  @media #{map-get($breakpoints, $breakpoint)} {
+    @content;
+  }
+}

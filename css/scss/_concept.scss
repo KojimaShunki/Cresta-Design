@@ -1,0 +1,126 @@
+@import 'function';
+
+#concept {
+  padding: 100px 15px 70px;
+
+  @include mq('sp') {
+    padding-bottom: 40px;
+  }
+
+  .wrapper {
+    max-width: 1200px;
+    margin: 0 auto;
+  
+    .container {
+      max-width: 1000px;
+      margin: 0 auto;
+
+      .section-title {
+        font-size: 3.75rem;
+        font-weight: bold;
+        font-style: italic;
+        position: relative;
+        letter-spacing: 0.1em;
+
+        @include mq('sp') {
+          font-size: 1.875rem;
+        }
+
+        &::after {
+          content: '';
+          width: 200px;
+          height: 5px;
+          background-color: #000;
+          position: absolute;
+          top: 50%;
+          left: 285px;
+          transform: translateY(-50%);
+
+          @include mq('sp') {
+            width: 90px;
+            left: 160px;
+          }
+        }
+      }
+
+      .content-title {
+        text-align: center;
+        font-size: 1.875rem;
+        font-weight: bold;
+        padding-top: 70px;
+        padding-bottom: 60px;
+
+        @include mq('sp') {
+          font-size: 1.25rem;
+          padding-top: 50px;
+          padding-bottom: 30px;
+        }
+
+        .br-sp {
+          display: none;
+
+          @include mq('sp') {
+            display: block;
+          }
+        }
+
+        .br-pc {
+          display: block;
+
+          @include mq('sp') {
+            display: none;
+          }
+        }
+
+      }
+
+      .content {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        @include mq('sp') {
+          flex-direction: column;
+        }
+      
+        .text {
+          width: 44%;
+          margin-right: 6%;
+
+          @include mq('sp') {
+            width: 100%;
+            margin-right: 0;
+            margin-bottom: 30px;
+          }
+        }
+      
+        .image {
+          max-width: 50%;
+
+          @include mq('sp') {
+            max-width: 100%;
+            width: 100%;
+          }
+        }
+      }
+    }
+
+    .section-subtitle {
+      max-width: 1200px;
+      margin: 0 auto;
+
+      p {
+        font-size: 5.625rem;
+        font-weight: bold;
+        color: rgba($color: #171717, $alpha: 0.05);
+        text-align: right;
+        padding-top: 70px;
+
+        @include mq('sp') {
+          font-size: 2.5rem;
+          padding-top: 40px;
+        }
+      }
+    }
+  }
+}
