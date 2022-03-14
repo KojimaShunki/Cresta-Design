@@ -405,7 +405,7 @@ li {
 }
 
 #works {
-  background-image: url(../../img/works-bgi@2x.jpg);
+  background-image: url(../img/works-bgi@2x.jpg);
   background-size: cover;
   background-position: center;
   padding: 100px 15px 70px;
@@ -686,7 +686,7 @@ li {
 }
 
 #contact {
-  background-image: url(../../img/contact-bgi@2x.jpg);
+  background-image: url(../img/contact-bgi@2x.jpg);
   background-size: cover;
   background-position: center;
   padding: 100px 15px 70px;
